@@ -114,6 +114,7 @@ Content here...
 - The site auto-deploys on push to main
 - Uses `shalzz/zola-deploy-action` for GitHub Pages deployment
 - No manual approval needed
+- **Always verify the workflow succeeds after pushing**: `gh run list --limit 1`
 
 ## Project Structure
 
