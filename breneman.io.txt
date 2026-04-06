@@ -1,0 +1,53 @@
+;;
+;; Domain:     breneman.io.
+;; Exported:   2026-04-06 19:58:59
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+breneman.io	3600	IN	SOA	rayne.ns.cloudflare.com. dns.cloudflare.com. 2052717213 10000 2400 604800 3600
+
+;; NS Records
+breneman.io.	86400	IN	NS	rayne.ns.cloudflare.com.
+breneman.io.	86400	IN	NS	uriah.ns.cloudflare.com.
+
+;; A Records
+breneman.io.	1	IN	A	185.199.111.153 ; cf_tags=cf-proxied:false
+breneman.io.	1	IN	A	185.199.110.153 ; cf_tags=cf-proxied:false
+breneman.io.	1	IN	A	185.199.109.153 ; cf_tags=cf-proxied:false
+breneman.io.	1	IN	A	185.199.108.153 ; cf_tags=cf-proxied:false
+
+;; CNAME Records
+_mta-sts.breneman.io.	1	IN	CNAME	mta-sts.tutanota.de. ; cf_tags=cf-proxied:false
+mta-sts.breneman.io.	1	IN	CNAME	mta-sts.tutanota.de. ; cf_tags=cf-proxied:false
+s1._domainkey.breneman.io.	1	IN	CNAME	s1.domainkey.tutanota.de. ; cf_tags=cf-proxied:false
+s2._domainkey.breneman.io.	1	IN	CNAME	s2.domainkey.tutanota.de. ; cf_tags=cf-proxied:false
+www.breneman.io.	1	IN	CNAME	nwbreneman.github.io. ; GitHub Pages cf_tags=cf-proxied:false
+
+;; MX Records
+breneman.io.	1	IN	MX	10 mail.tutanota.de.
+
+;; TXT Records
+breneman.io.	1	IN	TXT	"v=spf1 include:spf.tutanota.de -all"
+breneman.io.	1	IN	TXT	"t-verify=99d5e1d51947ef148466ab9ed22e213c"
+_dmarc.breneman.io.	1	IN	TXT	"v=DMARC1; p=quarantine; adkim=s"
+_github-pages-challenge-nwbreneman.breneman.io.	1	IN	TXT	"46d80313bac3dfd8467dc68554d321"
