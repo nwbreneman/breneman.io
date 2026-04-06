@@ -4,10 +4,11 @@ This project is a Zola static site generator website - a personal resume/portfol
 
 ## Build Commands
 
+This project uses Zola (static site generator) and Nix for development. Enter the nix shell first to access Zola.
+
 ```bash
-# Install Zola (if not using nix)
-# macOS: brew install zola
-# Linux: see https://github.com/getzola/zola#installation
+# Enter development shell (provides zola and other tools)
+nix develop
 
 # Start local development server (with live reload)
 zola serve
@@ -17,18 +18,13 @@ zola build
 
 # Check for errors without serving
 zola check
+
+# Exit nix shell when done
+exit
 ```
 
 ### Single Test Commands
 This project has no test suite - it's a static site with no JavaScript/TypeScript code.
-
-### Using Nix Flake
-```bash
-# Enter development shell with Zola
-nix develop
-
-# Or use direnv with .envrc (if present)
-```
 
 ## Code Style Guidelines
 
@@ -129,6 +125,7 @@ Content here...
 ├── static/             # Static assets (images, etc.)
 ├── templates/          # HTML templates
 │   ├── base.html       # Base template
+│   ├── index.html      # Home page template
 │   └── page.html       # Page template
 ├── .github/
 │   └── workflows/
